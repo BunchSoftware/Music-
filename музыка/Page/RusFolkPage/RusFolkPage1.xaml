@@ -1,0 +1,64 @@
+﻿<Page x:Class="музыка.RusFolkPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="RusFolkPage">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="1810,0,0,2">
+            <Image MouseDown="Min_MouseDown" Name="Min" Height="30" Width="30" Margin="15,10,0,10">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" Name="CloseButton" Width="30" Margin="15,10,20,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <Button Click="Button_Click"
+            Style="{StaticResource StyleButtonNumber}" FontFamily="Courier New"
+            Content="Народ" FontSize="70" Background="#FFF1FF6E" Height="95" Width="321" Grid.Row="2" Margin="0,59,1442,0"/>
+        <Button Click="Button_Click_1" 
+            Style="{StaticResource StyleButtonNumber}" Grid.Row="2" Background="#FF20FF6B" FontFamily="Courier New"
+            Content="Композитор" FontSize="70" Height="82" Width="477" Margin="0,149,960,0" />
+        <Image x:Name="Img"
+           Source="\Source\narod.jpg" Margin="923,185,83,68" Grid.RowSpan="2" Grid.Row="1"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Кто автор русских народных песен?"
+               FontFamily="Courier New" FontSize="75" Foreground="Black" Margin="358,47,358,452" Grid.RowSpan="2"/>
+        <Button Click="Button_Click_2" Grid.Row="2" Background="#FF3A97FF"
+            Style="{StaticResource StyleButtonNumber}"  FontFamily="Courier New"
+            Content="Певец" FontSize="70" Height="89" Width="290" Margin="157,257,0,0" HorizontalAlignment="Left" />
+        <Button Click="Button_Click_3" Grid.Row="2" Background="#FFFFB83A"
+            Style="{StaticResource StyleButtonNumber}"  FontFamily="Courier New"
+            Content="Писатель" FontSize="70" Height="97" Width="363" Margin="483,350,0,0" HorizontalAlignment="Left" />
+    </Grid>
+</Page>

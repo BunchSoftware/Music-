@@ -1,0 +1,63 @@
+﻿<Page x:Class="музыка.RusFolkPage3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="RusFolkPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="1810,0,0,2">
+            <Image MouseDown="Min_MouseDown" Name="Min" Height="30" Width="30" Margin="15,10,0,10">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" Name="CloseButton" Width="30" Margin="15,10,20,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <Button Click="Button_Click"
+            Style="{StaticResource StyleButtonNumber}" FontFamily="Courier New"
+            Content="В красных сарафанах" FontSize="70" Background="#FF8DFF6E" Height="98" Width="811" Grid.Row="2" Margin="0,27,1054,0"/>
+        <Button Click="Button_Click_1" 
+            Style="{StaticResource StyleButtonNumber}" Grid.Row="2" Background="#FFCAFF20" FontFamily="Courier New"
+            Content="Румяные" FontSize="70" Height="78" Width="387" Margin="0,179,1266,0" />
+        <Image x:Name="Img"
+           Source="\Source\8e046049e12c60a96245d3e00eaf7683-5976869680306_1500939926.jpg" Margin="971,50,-140,59" Grid.RowSpan="2" Grid.Row="1"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Традиционное обращение к мальчикам – добры молодцы, а к девочкам –
+красны девицы. Почему девицы красные?"
+               FontFamily="Courier New" FontSize="75" Foreground="Black" Margin="55,38,754,0"/>
+        <Button Click="Button_Click_2" Grid.Row="2" Background="#FF3A97FF"
+            Style="{StaticResource StyleButtonNumber}"  FontFamily="Courier New"
+            Content="Красивые, прекрасные" FontSize="65" Height="92" Width="811" Margin="55,312,0,0" HorizontalAlignment="Left" />
+    </Grid>
+</Page>

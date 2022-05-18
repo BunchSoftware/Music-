@@ -1,0 +1,60 @@
+﻿<Page x:Class="музыка.InstrumentPage3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="InstrumentPage">
+    <Grid Background="White" Margin="0,0,-4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Image MouseDown="Min_MouseDown" Name="Min" Height="30" Width="30" Margin="15,10,0,10">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" Name="CloseButton" Width="30" Margin="15,10,20,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Тромбон – это ударный или духовой инструмент? " Margin="466,60,321,-213"
+               FontFamily="Courier New" FontSize="72"/>
+        <Image x:Name="Img" Visibility="Hidden" Width="600" Height="600"
+           Source="/Source/tuba-jupiter.jpg" Margin="661,244,663,-793"
+           RenderTransformOrigin="0.124,0.522"/>
+        <Button Click="Button_Click_1" Width="336" Height="100" Background="#FFFD695B"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,846,1057,-895" FontFamily="Courier New"
+            Content="Духовой" FontSize="72"/>
+        <Button Click="Button_Click_2" Width="333" Height="100" Background="#FFFDF65B"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,850,581,-899" FontFamily="Courier New"
+            Content="Ударный" FontSize="72"/>
+        <Button Click="Button_Click" Width="444" Height="100" Background="#FF4FFF28"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,574,85,-623" FontFamily="Courier New"
+            Content="Подсказка" FontSize="72"/>
+    </Grid>
+</Page>

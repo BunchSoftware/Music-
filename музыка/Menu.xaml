@@ -1,0 +1,35 @@
+﻿<Page x:Class="музыка.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      d:DesignWidth="1280"
+      d:DesignHeight="720" 
+      mc:Ignorable="d" >
+    <Grid Background="{StaticResource ImageBrush2}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="427*"/>
+            <ColumnDefinition Width="446*"/>
+            <ColumnDefinition Width="407*"/>
+        </Grid.ColumnDefinitions>
+        <Image MouseDown="Play_Click" Name="Play" Grid.Row="2" Grid.Column="1" >
+            <FrameworkElement.Style>
+                <Style TargetType="{x:Type Image}">
+                    <Setter Property="Image.Source" Value="Source/Ресурс 22.png"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsMouseOver, ElementName=Play}" Value="true">
+                            <Setter Property="Image.Source" Value="Source/Ресурс 21.png"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </FrameworkElement.Style>
+        </Image>
+        <Image Source="/Source/Ресурс 20.png" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
+    </Grid>
+</Page>

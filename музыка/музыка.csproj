@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FF7631C-7456-4C0E-91D3-26CCA3AB51D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>музыка</RootNamespace>
+    <AssemblyName>музыка</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Page\ComposerPage\ComposerPage.xaml.cs">
+      <DependentUpon>ComposerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage1.xaml.cs">
+      <DependentUpon>ComposerPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage2.xaml.cs">
+      <DependentUpon>ComposerPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage3.xaml.cs">
+      <DependentUpon>ComposerPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage4.xaml.cs">
+      <DependentUpon>ComposerPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage5.xaml.cs">
+      <DependentUpon>ComposerPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ComposerPage\ComposerPage6.xaml.cs">
+      <DependentUpon>ComposerPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage.xaml.cs">
+      <DependentUpon>InstrumentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage1.xaml.cs">
+      <DependentUpon>InstrumentsPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage2.xaml.cs">
+      <DependentUpon>InstrumentsPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage3.xaml.cs">
+      <DependentUpon>InstrumentsPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage4.xaml.cs">
+      <DependentUpon>InstrumentsPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage5.xaml.cs">
+      <DependentUpon>InstrumentsPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InstrumentsPage\InstrumentsPage6.xaml.cs">
+      <DependentUpon>InstrumentsPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage.xaml.cs">
+      <DependentUpon>MelodyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage1.xaml.cs">
+      <DependentUpon>MelodyPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage2.xaml.cs">
+      <DependentUpon>MelodyPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage3.xaml.cs">
+      <DependentUpon>MelodyPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage4.xaml.cs">
+      <DependentUpon>MelodyPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage5.xaml.cs">
+      <DependentUpon>MelodyPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MelodyPage\MelodyPage6.xaml.cs">
+      <DependentUpon>MelodyPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage.xaml.cs">
+      <DependentUpon>RusFolkPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage1.xaml.cs">
+      <DependentUpon>RusFolkPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage2.xaml.cs">
+      <DependentUpon>RusFolkPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage3.xaml.cs">
+      <DependentUpon>RusFolkPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage4.xaml.cs">
+      <DependentUpon>RusFolkPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage5.xaml.cs">
+      <DependentUpon>RusFolkPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\RusFolkPage\RusFolkPage6.xaml.cs">
+      <DependentUpon>RusFolkPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage.xaml.cs">
+      <DependentUpon>SingerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage1.xaml.cs">
+      <DependentUpon>SingerPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage2.xaml.cs">
+      <DependentUpon>SingerPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage3.xaml.cs">
+      <DependentUpon>SingerPage3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage4.xaml.cs">
+      <DependentUpon>SingerPage4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage5.xaml.cs">
+      <DependentUpon>SingerPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SingerPage\SingerPage6.xaml.cs">
+      <DependentUpon>SingerPage6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="True.xaml.cs">
+      <DependentUpon>True.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChoosePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dictionary.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="False.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChoosePage.xaml.cs">
+      <DependentUpon>ChoosePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="False.xaml.cs">
+      <DependentUpon>False.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\ComposerPage\ComposerPage6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\InstrumentsPage\InstrumentsPage6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\MelodyPage\MelodyPage6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\RusFolkPage\RusFolkPage6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage5.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Page\SingerPage\SingerPage6.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="True.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source\maxresdefault.jpg" />
+    <Content Include="egor-krid-samaya-samaya%28mp3gid.me%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GAYAZOV_BROTHER_-_MALINOVAYA_LADA_%28musmore.com%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="iowa-marshrutka.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Markul_Dzharakhov_-_YA_v_momente_%28musmore.com%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="NILETTO - Любимка.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Psy - Oppa Gangam Style %28mp3store.cc%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Source\ms9QXbf7fw0.jpg" />
+    <Resource Include="Source\maxresdefault %281%29.jpg" />
+    <Resource Include="Source\maxresdefault %282%29.jpg" />
+    <Resource Include="Source\artworks-000090497020-r6lu74-t500x500.jpg" />
+    <Resource Include="Source\maxresdefault %283%29.jpg" />
+    <Resource Include="Source\maxresdefault %284%29.jpg" />
+    <Resource Include="Source\premium-icon-high-volume-2989865.png" />
+    <Resource Include="Source\premium-icon-mute-2989884.png" />
+    <Content Include="undertale-papirus_%28Krolik.biz%29.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Макс Корж - Малый повзрослел.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Source\pause--v1.png" />
+    <Resource Include="Source\play--v1.png" />
+    <Resource Include="Source\vesna-karpat1.jpg" />
+    <Resource Include="Source\narod.jpg" />
+    <Resource Include="Source\Stepanov_005.jpg" />
+    <Resource Include="Source\Michail_Ivanovič_Glinka.jpg" />
+    <Resource Include="Source\Rößler_Joseph_Haydn.jpg" />
+    <Resource Include="Source\0.81613700_0025201644275422.jpeg" />
+    <Resource Include="Source\1611938396_26-p-krasivii-fon-muzika-28.jpg" />
+    <Resource Include="Source\1616535539_5-p-fon-dlya-prezentatsii-po-muzike-5.jpg" />
+    <Resource Include="Source\1637999681_1-flomaster-club-p-risunok-skomorokha-dlya-detei-detskie-1.jpg" />
+    <Resource Include="Source\20220224-max-post.jpg" />
+    <Resource Include="Source\640px-clavecin_flamand.png" />
+    <Resource Include="Source\645c4201ff1f7c92e992d8fb4b959c97.jpg" />
+    <Resource Include="Source\906727875_0_114_915_629_1920x0_80_0_0_aa032796090eadae96a159e33fe9f2fd.jpg" />
+    <Resource Include="Source\983395390_149_0_1844_1271_1920x0_80_0_0_53e9eb42aaf62b020fc95f12efffc7e0.jpg" />
+    <Resource Include="Source\alexandr-alexandrov-kompozitor-01.jpg" />
+    <Resource Include="Source\bdcb34bfc20546d5b67accbe45dc.jpg" />
+    <Resource Include="Source\Composer\Ресурс 393%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 394%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 395%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 396%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 397%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 398%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 399%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 400%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 401%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 402%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 403%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 404%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 405%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 406%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 407%403x.png" />
+    <Resource Include="Source\Composer\Ресурс 408%403x.png" />
+    <Resource Include="Source\f910dbd9-b37c-4938-ada6-8263518ec2ba043127050649.jpg" />
+    <Resource Include="Source\houseofmusicorgan.jpg" />
+    <Resource Include="Source\18042901.jpg" />
+    <Resource Include="Source\360a561e-7b6f-43bd-aca0-f152c724e548.jpg" />
+    <Resource Include="Source\274px-Johann_Strauss_II_%283%29.jpg" />
+    <Resource Include="Source\8e046049e12c60a96245d3e00eaf7683-5976869680306_1500939926.jpg" />
+    <Resource Include="Source\Betula_pendula_001.jpg" />
+    <Resource Include="Source\b69f46d66659e3c438f2f6c5408896e9_ce_1802x1200x59x0_cropped_666x444.jpg" />
+    <Resource Include="Source\fb67c0fcdd6ab8eeb8f3d63e6529fb07.jpg" />
+    <Content Include="Source\images.jfif" />
+    <Resource Include="Source\Instruments\Ресурс 444%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 445%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 455%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 456%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 457%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 458%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 459%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 460%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 461%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 462%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 463%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 464%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 465%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 466%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 467%403x.png" />
+    <Resource Include="Source\Instruments\Ресурс 468%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 437%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 438%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 439%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 440%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 441%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 442%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 443%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 446%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 447%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 448%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 449%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 450%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 451%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 452%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 453%403x.png" />
+    <Resource Include="Source\Melody\Ресурс 454%403x.png" />
+    <Resource Include="Source\paryashhie-duxovye-i-strunnye-muzykalnye-instrumenty.jpg" />
+    <Resource Include="Source\RusFolk\rusfolk4.png" />
+    <Resource Include="Source\RusFolk\Ресурс 425%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 426%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 427%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 428%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 429%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 430%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 431%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 432%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 433%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 434%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 435%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 436%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 469%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 470%403x.png" />
+    <Resource Include="Source\RusFolk\Ресурс 471%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 409%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 410%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 411%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 412%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 413%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 414%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 415%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 416%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 417%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 418%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 419%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 420%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 421%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 422%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 423%403x.png" />
+    <Resource Include="Source\Singer\Ресурс 424%403x.png" />
+    <Resource Include="Source\tanbur-instrument.jpg" />
+    <Resource Include="Source\thumb2-alan-walker-4k-blue-neon-lights-music-stars-norwegian-djs.jpg" />
+    <Resource Include="Source\tim-post.jpg" />
+    <Resource Include="Source\tuba-jupiter.jpg" />
+    <Resource Include="Source\wp.jpg" />
+    <Resource Include="Source\z1tekzjctwba3x0nfzrx.jpg" />
+    <Resource Include="Source\Гитара.jpg" />
+    <Resource Include="Source\Ресурс 11.png" />
+    <Resource Include="Source\Ресурс 20.png" />
+    <Resource Include="Source\Ресурс 21.png" />
+    <Resource Include="Source\Ресурс 22.png" />
+    <Resource Include="Source\Ресурс 386%403x.png" />
+    <Resource Include="Source\Ресурс 387%403x.png" />
+    <Resource Include="Source\Ресурс 389%403x.png" />
+    <Resource Include="Source\Ресурс 390%403x.png" />
+    <Resource Include="Source\Ресурс 391%403x.png" />
+    <Resource Include="Source\Ресурс 392%403x.png" />
+    <Resource Include="Source\Ресурс 473%403x.png" />
+    <Resource Include="Source\Ресурс 474%403x.png" />
+    <Resource Include="Source\Ресурс 475%403x.png" />
+    <Resource Include="Source\Ресурс 476%403x.png" />
+    <Resource Include="Source\Ресурс 477%403x.png" />
+    <Resource Include="Source\Ресурс 7.png" />
+    <Resource Include="Source\Ресурс 8.png" />
+    <Resource Include="Source\Ресурс 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Music\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

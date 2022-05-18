@@ -1,0 +1,59 @@
+﻿<Page x:Class="музыка.InstrumentPage6"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="InstrumentPage">
+    <Grid Background="White" Margin="0,0,-4,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+            <Image MouseDown="Min_MouseDown" Name="Min" Height="30" Width="30" Margin="15,10,0,10">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" Name="CloseButton" Width="30" Margin="15,10,20,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="Какой это инструмент, прародитель домры ?" Margin="418,111,112,-264"
+               FontFamily="Courier New" FontSize="72"/>
+        <Image x:Name="Img" Source="/Source/tanbur-instrument.jpg" Margin="492,173,577,-966"
+           RenderTransformOrigin="0.124,0.522"/>
+        <Button Click="Button_Click_1" Width="336" Height="100" Background="#FFFDC95B"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,838,1161,-887" FontFamily="Courier New"
+            Content="Гитара" FontSize="72"/>
+        <Button Click="Button_Click_2" Width="333" Height="100" Background="#FFFF9A54"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,940,763,-989" FontFamily="Courier New"
+            Content="Танбур" FontSize="72"/>
+        <Button Click="Button_Click" Width="420" Height="100" Background="#FFABFBFF"
+            Style="{StaticResource StyleButtonNumber}" Margin="0,845,277,-894" FontFamily="Courier New"
+            Content="Балалайка" FontSize="72"/>
+    </Grid>
+</Page>

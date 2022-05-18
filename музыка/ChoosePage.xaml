@@ -1,0 +1,690 @@
+﻿<Page x:Class="музыка.ChoosePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:музыка"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ChoosePage">
+    <Grid Background="White" Grid.ColumnSpan="9" Margin="0,0,-1,0" Grid.RowSpan="6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="430"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition Width="170"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.ColumnSpan="9" Margin="0,0,0,0">
+            <Image MouseDown="Min_MouseDown" x:Name="Min1" Height="30" Width="30" Margin="15,-30,0,0">
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="\Source\Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" x:Name="CloseButton1" Width="30" Margin="15,-20,45,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="\Source\Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <Button Click="InstrumentsButton_Click" x:Name="InstrumentsButton" Style="{StaticResource StyleButton}"
+              Grid.Column="1" Grid.Row="1">
+            <Image>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Source" Value="\Source\Instruments\Ресурс 467@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton}" Value="true">
+                                <Setter Property="Source" Value="\Source\Instruments\Ресурс 460@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton_Click" x:Name="InstrumentsCheckButton"
+              Style="{StaticResource InstrumentsButton}" Grid.Column="1" Grid.Row="1"/>
+        <Button Click="InstrumentsButton1_Click" x:Name="InstrumentsButton1" Style="{DynamicResource StyleButton}"
+              Grid.Column="2" Grid.Row="1">
+            <Image>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 466@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton1}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 459@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton1_Click" x:Name="InstrumentsCheckButton1"
+              Style="{StaticResource InstrumentsButton}" Grid.Column="2" Grid.Row="1"/>
+        <Button Click="InstrumentsButton2_Click" x:Name="InstrumentsButton2" Style="{StaticResource StyleButton}"
+              Grid.Column="3" Grid.Row="1">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 465@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton2}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 458@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton2_Click" x:Name="InstrumentsCheckButton2"
+         Style="{StaticResource InstrumentsButton}" Grid.Column="3" Grid.Row="1"/>
+        <Button Click="InstrumentsButton3_Click" x:Name="InstrumentsButton3" Style="{StaticResource StyleButton}"
+              Grid.Column="4" Grid.Row="1">
+            <Image>
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 464@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton3}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 457@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton3_Click" x:Name="InstrumentsCheckButton3" Style="{StaticResource InstrumentsButton}" Grid.Column="4" Grid.Row="1"/>
+        <Button Click="InstrumentsButton4_Click" Name="InstrumentsButton4" Style="{StaticResource StyleButton}" Grid.Column="5" Grid.Row="1">
+            <Image>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 463@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton4}" Value="true">
+                                <Setter Property="Image.Source" Value="\Source\Instruments\Ресурс 456@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton4_Click" x:Name="InstrumentsCheckButton4"
+              Style="{StaticResource InstrumentsButton}" Grid.Column="5" Grid.Row="1"/>
+        <Button Click="InstrumentsButton5_Click" x:Name="InstrumentsButton5" Style="{StaticResource StyleButton}"
+              Grid.Column="6" Grid.Row="1">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Instruments/Ресурс 462@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton5}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Instruments/Ресурс 455@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton5_Click" x:Name="InstrumentsCheckButton5"
+              Style="{StaticResource InstrumentsButton}" Grid.Column="6" Grid.Row="1"/>
+        <Button Click="InstrumentsButton6_Click" x:Name="InstrumentsButton6" Style="{StaticResource StyleButton}"
+              Grid.Column="7" Grid.Row="1">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Instruments/Ресурс 468@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=InstrumentsButton6}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Instruments/Ресурс 461@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="InstrumentsCheckButton6_Click" x:Name="InstrumentsCheckButton6" Style="{StaticResource InstrumentsButton}" Grid.Column="7" Grid.Row="1"/>
+        <Button Click="ComposerButton_Click" x:Name="ComposerButton" Style="{StaticResource StyleButton}"
+              Grid.Column="1" Grid.Row="2">
+            <Image>
+                <Image.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 408@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=ComposerButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 400@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton_Click" x:Name="ComposerCheckButton"
+              Style="{StaticResource ComposerButton}" Grid.Column="1" Grid.Row="2"/>
+        <Button Click="ComposerButton1_Click" x:Name="ComposerButton1" Style="{StaticResource StyleButton}"
+              Grid.Column="2" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 407@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=ComposerButton1}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 399@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton1_Click" x:Name="ComposerCheckButton1"
+              Style="{StaticResource ComposerButton}" Grid.Column="2" Grid.Row="2"/>
+        <Button Click="ComposerButton2_Click" x:Name="ComposerButton2" Style="{StaticResource StyleButton}"
+              Grid.Column="3" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 404@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=ComposerButton2}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 396@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton2_Click" x:Name="ComposerCheckButton2"
+              Style="{StaticResource ComposerButton}" Grid.Column="3" Grid.Row="2"/>
+        <Button Click="ComposerButton3_Click" x:Name="ComposerButton3" Style="{StaticResource StyleButton}"
+              Grid.Column="4" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 403@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=ComposerButton3}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 395@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton3_Click" x:Name="ComposerCheckButton3"
+              Style="{StaticResource ComposerButton}" Grid.Column="4" Grid.Row="2"/>
+        <Button Click="ComposerButton4_Click" x:Name="ComposerButton4" Style="{StaticResource StyleButton}"
+              Grid.Column="5" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 406@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=ComposerButton4}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 398@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton4_Click" x:Name="ComposerCheckButton4"
+              Style="{StaticResource ComposerButton}" Grid.Column="5" Grid.Row="2"/>
+        <Button Click="СomposerButton5_Click" x:Name="СomposerButton5" Style="{StaticResource StyleButton}"
+              Grid.Column="6" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 405@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=СomposerButton5}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 397@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton5_Click" x:Name="ComposerCheckButton5"
+              Style="{StaticResource ComposerButton}" Grid.Column="6" Grid.Row="2"/>
+        <Button Click="ComposerButton6_Click" x:Name="ComposerButton6" Style="{StaticResource StyleButton}"
+              Grid.Column="7" Grid.Row="2">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 402@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=ComposerButton6}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Composer/Ресурс 394@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="ComposerCheckButton6_Click" x:Name="ComposerCheckButton6"
+              Style="{StaticResource ComposerButton}" Grid.Column="7" Grid.Row="2"/>
+        <Button Click="SingerButton_Click" x:Name="SingerButton" Style="{StaticResource StyleButton}"
+              Grid.Column="1" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 424@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 416@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton_Click" x:Name="SingerCheckButton" Style="{StaticResource SingerButton}"
+              Grid.Column="1" Grid.Row="3"/>
+        <Button Click="SingerButton1_Click" x:Name="SingerButton1" Style="{StaticResource StyleButton}"
+              Grid.Column="2" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 423@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton1}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 415@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton1_Click" x:Name="SingerCheckButton1" Style="{StaticResource SingerButton}"
+              Grid.Column="2" Grid.Row="3"/>
+        <Button Click="SingerButton2_Click" x:Name="SingerButton2" Style="{StaticResource StyleButton}"
+              Grid.Column="3" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 420@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton2}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 412@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton2_Click" x:Name="SingerCheckButton2" Style="{StaticResource SingerButton}"
+              Grid.Column="3" Grid.Row="3"/>
+        <Button Click="SingerButton3_Click" x:Name="SingerButton3" Style="{StaticResource StyleButton}"
+              Grid.Column="4" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 419@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton3}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 411@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton3_Click" x:Name="SingerCheckButton3" Style="{StaticResource SingerButton}"
+              Grid.Column="4" Grid.Row="3"/>
+        <Button Click="SingerButton4_Click" x:Name="SingerButton4" Style="{StaticResource StyleButton}"
+              Grid.Column="5" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 422@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton4}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 414@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton4_Click" x:Name="SingerCheckButton4" Style="{StaticResource SingerButton}"
+              Grid.Column="5" Grid.Row="3"/>
+        <Button Click="SingerButton5_Click" x:Name="SingerButton5" Style="{StaticResource StyleButton}"
+              Grid.Column="6" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 421@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton5}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 413@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton5_Click" x:Name="SingerCheckButton5" Style="{StaticResource SingerButton}"
+              Grid.Column="6" Grid.Row="3"/>
+        <Button Click="SingerButton6_Click" x:Name="SingerButton6" Style="{StaticResource StyleButton}"
+              Grid.Column="7" Grid.Row="3">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 418@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=SingerButton6}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Singer/Ресурс 410@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="SingerCheckButton6_Click" x:Name="SingerCheckButton6" Style="{StaticResource SingerButton}"
+              Grid.Column="7" Grid.Row="3"/>
+        <Button Click="RusFolkButton_Click" x:Name="RusFolkButton" Style="{StaticResource StyleButton}"
+              Grid.Column="1" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 436@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 430@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton_Click" x:Name="RusFolkCheckButton" Style="{StaticResource RusFolkButton}"
+              Grid.Column="1" Grid.Row="4"/>
+        <Button Click="RusFolkButton1_Click" x:Name="RusFolkButton1" Style="{StaticResource StyleButton}"
+              Grid.Column="2" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 435@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton1}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 429@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton1_Click" x:Name="RusFolkCheckButton1"
+              Style="{StaticResource RusFolkButton}" Grid.Column="2" Grid.Row="4"/>
+        <Button Click="RusFolkButton2_Click" x:Name="RusFolkButton2" Style="{StaticResource StyleButton}"
+              Grid.Column="3" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 432@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton2}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 426@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton2_Click" x:Name="RusFolkCheckButton2"
+              Style="{StaticResource RusFolkButton}" Grid.Column="3" Grid.Row="4"/>
+        <Button Click="RusFolkButton3_Click" x:Name="RusFolkButton3" Style="{StaticResource StyleButton}"
+              Grid.Column="4" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/rusFolk4.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton3}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 470@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton3_Click" x:Name="RusFolkCheckButton3"
+              Style="{StaticResource RusFolkButton}" Grid.Column="4" Grid.Row="4"/>
+        <Button Click="RusFolkButton4_Click" x:Name="RusFolkButton4" Style="{StaticResource StyleButton}"
+              Grid.Column="5" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 434@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton4}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 428@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton4_Click" x:Name="RusFolkCheckButton4"
+              Style="{StaticResource RusFolkButton}" Grid.Column="5" Grid.Row="4"/>
+        <Button Click="RusFolkButton5_Click" x:Name="RusFolkButton5" Style="{StaticResource StyleButton}"
+              Grid.Column="6" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 433@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton5}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 427@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton5_Click" x:Name="RusFolkCheckButton5"
+              Style="{StaticResource RusFolkButton}" Grid.Column="6" Grid.Row="4"/>
+        <Button Click="RusFolkButton6_Click" x:Name="RusFolkButton6" Style="{StaticResource StyleButton}"
+              Grid.Column="7" Grid.Row="4">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 431@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=RusFolkButton6}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/RusFolk/Ресурс 425@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="RusFolkCheckButton6_Click" x:Name="RusFolkCheckButton6"
+              Style="{StaticResource RusFolkButton}" Grid.Column="7" Grid.Row="4"/>
+        <Button Click="MelodyButton_Click" x:Name="MelodyButton" Style="{StaticResource StyleButton}"
+              Grid.Column="1" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 454@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 441@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton_Click" x:Name="MelodyCheckButton" Style="{StaticResource MelodyButton}"
+              Grid.Column="1" Grid.Row="5"/>
+        <Button Click="MelodyButton1_Click" x:Name="MelodyButton1" Style="{StaticResource StyleButton}"
+              Grid.Column="2" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 453@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton1}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 440@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton1_Click" x:Name="MelodyCheckButton1" Style="{StaticResource MelodyButton}"
+              Grid.Column="2" Grid.Row="5"/>
+        <Button Click="MelodyButton2_Click" x:Name="MelodyButton2" Style="{StaticResource StyleButton}"
+              Grid.Column="3" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 452@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton2}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 439@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton2_Click" x:Name="MelodyCheckButton2" Style="{StaticResource MelodyButton}"
+              Grid.Column="3" Grid.Row="5"/>
+        <Button Click="MelodyButton3_Click" x:Name="MelodyButton3" Style="{StaticResource StyleButton}"
+              Grid.Column="4" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 451@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton3}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 438@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton3_Click" x:Name="MelodyCheckButton3" Style="{StaticResource MelodyButton}"
+              Grid.Column="4" Grid.Row="5"/>
+        <Button Click="MelodyButton4_Click" x:Name="MelodyButton4" Style="{StaticResource StyleButton}"
+              Grid.Column="5" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 437@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton4}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 450@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton4_Click" x:Name="MelodyCheckButton4" Style="{StaticResource MelodyButton}"
+              Grid.Column="5" Grid.Row="5"/>
+        <Button Click="MelodyButton5_Click" x:Name="MelodyButton5" Style="{StaticResource StyleButton}"
+              Grid.Column="6" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 449@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton5}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 447@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton5_Click" x:Name="MelodyCheckButton5" Style="{StaticResource MelodyButton}"
+              Grid.Column="6" Grid.Row="5"/>
+        <Button Click="MelodyButton6_Click" x:Name="MelodyButton6" Style="{StaticResource StyleButton}"
+              Grid.Column="7" Grid.Row="5">
+            <Image>
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 448@3x.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=IsMouseOver, ElementName=MelodyButton6}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Melody/Ресурс 446@3x.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+            </Image>
+        </Button>
+        <Button Click="MelodyCheckButton6_Click" x:Name="MelodyCheckButton6" Style="{StaticResource MelodyButton}"
+              Grid.Column="7" Grid.Row="5"/>
+        <Button x:Name="RandomFull" Style="{StaticResource StyleButtonFullRandom}"
+              HorizontalAlignment="Stretch" Grid.Column="7" Margin="40,5,0,0" Height="82" Click="RandomFull_Click"/>
+        <Button Click="Random_Click" x:Name="Random" Style="{StaticResource StyleButtonRandom}" VerticalAlignment="Top"
+              HorizontalAlignment="Center" Grid.Column="8" Grid.Row="1" Cursor="Hand"/>
+        <Button x:Name="Random1" Style="{StaticResource StyleButtonRandom}" VerticalAlignment="Top"
+              HorizontalAlignment="Center" Grid.Column="8" Grid.Row="2" Click="Random1_Click"/>
+        <Button x:Name="Random2" Style="{StaticResource StyleButtonRandom}" VerticalAlignment="Top"
+              HorizontalAlignment="Center" Grid.Column="8" Grid.Row="3" Click="Random2_Click"/>
+        <Button x:Name="Random3" Style="{StaticResource StyleButtonRandom}" VerticalAlignment="Top"
+              HorizontalAlignment="Center" Grid.Column="8" Grid.Row="4" Click="Random3_Click"/>
+        <Button x:Name="Random4" Style="{StaticResource StyleButtonRandom}" VerticalAlignment="Top"
+              HorizontalAlignment="Center" Grid.Column="8" Grid.Row="5" Click="Random4_Click"/>
+        <Image Source="/Source/Ресурс 473@3x.png" Grid.ColumnSpan="6" Grid.Column="1" Margin="181,13,61,13"/>
+        <Image Source="/Source/Ресурс 474@3x.png" Margin="6,22,4,8"/>
+        <TextBlock x:Name="text" TextWrapping="Wrap" Height="150" Width="430" VerticalAlignment="Center"
+                 HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1" Margin="12,19,178,31"
+                 Text="Музыкальные инструменты" FontFamily="Courier New" FontSize="62" Grid.ColumnSpan="2"
+                 FontWeight="Bold"/>
+        <TextBlock TextWrapping="Wrap" Height="150" Width="430" VerticalAlignment="Center"
+                 HorizontalAlignment="Center" Grid.Column="0" Grid.Row="2" Text="Композиторы" FontSize="62"
+                 FontFamily="Courier New" FontWeight="Bold" Margin="14,62,176,188" Grid.RowSpan="2"
+                 Grid.ColumnSpan="2"/>
+        <TextBlock TextWrapping="Wrap" Height="150" Width="430" VerticalAlignment="Top"
+                 HorizontalAlignment="Left" Grid.Column="0" Grid.Row="3" Text="Угадай исполнителя" FontSize="62"
+                 FontFamily="Courier New" FontWeight="Bold" Margin="12,5,0,0" Grid.ColumnSpan="2"/>
+        <TextBlock TextWrapping="Wrap" Height="150" Width="430" VerticalAlignment="Center"
+                 HorizontalAlignment="Center" Grid.Column="0" Grid.Row="4" Text="Русский фольклор" FontSize="62"
+                 FontFamily="Courier New" FontWeight="Bold" Margin="28,10,162,40" Grid.ColumnSpan="2"/>
+        <TextBlock TextWrapping="Wrap" Height="150" Width="430" VerticalAlignment="Center"
+                 HorizontalAlignment="Center" Grid.Column="0" Grid.Row="5" Text="Угадай мелодию" FontSize="62"
+                 FontFamily="Courier New" FontWeight="Bold" Margin="26,10,164,40" Grid.ColumnSpan="2"/>
+        <Image Source="Source/Ресурс 473@3x.png" Grid.ColumnSpan="6" Grid.Column="1" Margin="181,13,61,13"/>
+        <MediaElement Name="media" LoadedBehavior="Manual" Source="undertale-papirus_(Krolik.biz).mp3" MediaEnded="media_MediaEnded"/>
+        <Button  Name="NoSound" Style="{StaticResource StyleNoSound}" Click="Button_Click" Grid.Column="6" Grid.Row="0" HorizontalAlignment="Left" Height="76" Width="111" RenderTransformOrigin="0.739,0.539" Cursor="Hand" Grid.ColumnSpan="2" Margin="136,10,0,0"/>
+        <Button Name="Sound"  Visibility="Hidden" Style="{StaticResource  StyleSound}" Click="Button_Click" Grid.Column="6" Grid.Row="0" Grid.ColumnSpan="2" Margin="136,10,0,0" HorizontalAlignment="Left" Height="76" Width="111" Cursor="Hand"/>
+    </Grid>
+</Page>

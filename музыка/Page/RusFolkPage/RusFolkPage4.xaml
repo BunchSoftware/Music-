@@ -1,0 +1,62 @@
+﻿<Page x:Class="музыка.RusFolkPage4"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="RusFolkPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="1810,0,0,2">
+            <Image MouseDown="Min_MouseDown" Name="Min" Height="30" Width="30" Margin="15,10,0,10">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 11.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=Min}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 7.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+            <Image MouseDown="Close_MouseDown" Name="CloseButton" Width="30" Margin="15,10,20,11">
+                <FrameworkElement.Style>
+                    <Style TargetType="{x:Type Image}">
+                        <Setter Property="Image.Source" Value="/Source/Ресурс 9.png"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsMouseOver, ElementName=CloseButton}" Value="true">
+                                <Setter Property="Image.Source" Value="/Source/Ресурс 8.png"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </FrameworkElement.Style>
+                <UIElement.Effect>
+                    <BlurEffect Radius="1"/>
+                </UIElement.Effect>
+            </Image>
+        </StackPanel>
+        <Button Click="Button_Click"
+            Style="{StaticResource StyleButtonNumber}" FontFamily="Courier New"
+            Content="Во поле берёза стояла" FontSize="70" Background="#FF6EFFF5" Height="98" Width="977" Grid.Row="2" Margin="0,10,821,0"/>
+        <Button Click="Button_Click_1" 
+            Style="{StaticResource StyleButtonNumber}" Grid.Row="2" Background="#FFFF8620" FontFamily="Courier New"
+            Content="В траве сидел кузнечик" FontSize="70" Height="78" Width="1021" Margin="0,179,799,0" />
+        <Image x:Name="Img"
+           Source="\Source\Betula_pendula_001.jpg" Margin="926,30,-112,57" Grid.RowSpan="2" Grid.Row="1"/>
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Найдите среди перечисленных песен русскую народную:"
+               FontFamily="Courier New" FontSize="75" Foreground="Black" Margin="122,28,687,10"/>
+        <Button Click="Button_Click_2" Grid.Row="2" Background="#FF3AB2FF"
+            Style="{StaticResource StyleButtonNumber}"  FontFamily="Courier New"
+            Content="В лесу родилась ёлочка" FontSize="65" Height="92" Width="968" Margin="131,315,0,0" HorizontalAlignment="Left" />
+    </Grid>
+</Page>
